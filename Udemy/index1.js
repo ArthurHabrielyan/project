@@ -1,18 +1,51 @@
-const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели", "");
+// "use strict";
+
+// const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели", "");
+
+// const personalMovieDB = {
+//   count: numberOfFilms,
+//   movies: {},
+//   actors: {},
+//   genres: [],
+//   private: false,
+// };
+
+// for (let i = 0; i < 2; i++) {
+//   const a = prompt("Один из последних просмотренных фильмов?", ""),
+//     b = prompt("На сколько оцените его?", "");
+
+//   if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+//     personalMovieDB.movies[a] = b;
+//     console.log("done");
+//   } else {
+//     console.log("error");
+//     i--;
+//   }
+// }
+
+// console.log(personalMovieDB);
+
+"use strict";
+
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?", "");
 
 const personalMovieDB = {
   count: numberOfFilms,
   movies: {},
   actors: {},
   genres: [],
-  private: false,
+  privat: false,
 };
-const a = prompt("Один из последних просмотренных фильмов?", "");
-const b = prompt("На сколько оцените его?", "");
-const c = prompt("Один из последних просмотренных фильмов?", "");
-const d = prompt("На сколько оцените его?", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+for (let i = 0; i < 2; i++) {
+  const a = prompt("Один из последних просмотренных фильмов?", ""),
+    b = prompt("На сколько оцените его?", "");
 
-console.log(personalMovieDB);
+  if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+    personalMovieDB.movies[a] = b;
+    console.log("done");
+  } else {
+    console.log("error");
+    i--;
+  }
+}
